@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form page</title>
+    <style>
+        body{
+
+            background-image: url('img01.jpg');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:100% 100%;
+            border: 2px solid rgba(255, 255, 255, .2);
+            }
+
+    </style>
+
+    <script type="text/javascript">
+        function bca()
+        {
+            var n,m,e,v;
+
+            n=frms.nm.value;
+            m=frms.mo.value;
+            e=frms.em.value;
+            v=frms.vi.value;
+
+            p1=/^[a-z  A-Z]+$/;
+            p2=/^[0-9]+$/;
+            p3=/^[a-z0-9.@]+$/;
+            p4=/^[0-9]+$/;
+
+            if(n.match(p1))
+            {
+            }
+            else
+            {
+                alert("Please Enter Valid Name")
+            }
+            
+            if(m.match(p2))
+            {
+            }
+            else
+            {
+                alert("Please Enter Valid Number")
+            }
+
+            if(e.match(p3))
+            {
+            }
+            else
+            {
+                alert("Please Enter Valid Email")
+            }
+
+            if(v.match(p4))
+            {
+            }
+            else
+            {
+                alert("Please Enter Valid Voter id")
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+<form name="frms">
+    <table border="0" align="center" cellpadding="5px" style="color:yellow;background-color:transparent;">
+        <tr>
+            <th>Name</th>
+            <th> <input type="text" name="nm" id="nm" />  </th> 
+        </tr> 
+
+        <tr> 
+            <th>Address</th>
+            <th>
+                <textarea name="ad" id="ad" cols="25" ></textarea> 
+            </th>
+        </tr>
+
+        <tr>
+            <th>City</th>
+            <th>
+                <select name="ct" id="ct" >
+                    <option> Bhavnagar </option>
+                    <option> Surat </option>
+                    <option> Ahmedabad </option>
+                    <option> Rajkot </option>
+                </select>
+            </th>
+        </tr>
+
+        <tr>
+            <th>Mobile Number</th>
+            <th>
+                <input type="text" name="mo" id="mo" maxlength="10" />
+            </th>
+        </tr>
+
+        <tr>
+            <th>Emain</th>
+            <th>
+                <input type="email" name="em" id="em" />
+            </th>
+        </tr>
+
+        <tr>
+            <th>Voter id</th>
+            <th>
+                <input type="text" name="vi" id="vi" maxlength="12" />
+            </th>
+        </tr>
+
+        <tr>
+            <th>Gender</th>
+            <th style="color:yellow;">
+                <input type="radio" name="gn" id="gn" checked="checked" />Male
+                <input type="radio" name="gn" id="gn" />Female
+                <input type="radio" name="gn" id="gn" />Others
+            </th>
+        </tr>
+
+        <tr>
+            <th>Birth Date</th>
+            <th>
+                <input type="date" name="bd" id="bd" />
+            </th>
+        </tr>
+
+        <tr>
+            <th>Hobbies</th>
+            <th style="color:yellow;">
+                <input type="checkbox" name="ho" id="ho" /> Traveling
+                <input type="checkbox" name="ho" id="ho" /> Dancing <br>
+                <input type="checkbox" name="ho" id="ho" /> Singing
+                <input type="checkbox" name="ho" id="ho" /> Sleeping
+            </th>
+        </tr>
+
+        <tr>    
+            <th colspan="2">
+                <input type="submit" name="s" id="s" onclick="bca()" />
+                <input type="reset" name="r" id="r" />
+             </th>
+        </tr>
+
+    </table>
+    
+</body>
+</form>
+</html>
